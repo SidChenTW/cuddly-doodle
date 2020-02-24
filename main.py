@@ -1,5 +1,7 @@
+import math
 import os
 import sys
+
 
 def AlwaysTrue():
     print ("AlwaysTrue()", end=' ')
@@ -51,6 +53,24 @@ def equal_float(a, b):
 def float_test():
     print ([0.0, 5.4, -2.5])
     print (sys.float_info.epsilon)
+    
+    a = 123.456
+    print (int(a))
+    print (round(a, 1))
+    print (math.floor(a))
+    print (math.ceil(a))
+    a = 12.0
+    print (a.is_integer())
+    b = 4.125
+    print (b.as_integer_ratio())
+    
+    s = b.hex()
+    print (s)
+    print (float.fromhex(s))
+    
+    print (math.pi)
+    print (math.hypot(5, 12))
+    print (math.modf(13.732))
 
 if __name__ == '__main__':
     int_test()
