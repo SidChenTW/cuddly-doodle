@@ -72,7 +72,13 @@ def float_test():
     print (math.hypot(5, 12))
     print (math.modf(13.732))
 
+def complex_test():
+    z = 5-12j
+    print(z.real, z.imag)
+    print (z.conjugate())
+
 if __name__ == '__main__':
     int_test()
     bool_test()
     float_test()
+    complex_test()
