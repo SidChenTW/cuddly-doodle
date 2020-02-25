@@ -89,6 +89,16 @@ def decimal_test():
     print (23/1.05)
     print (decimal.Decimal(23)/decimal.Decimal('1.05'))
 
+def string_test():
+    text='''HelloWorld
+1.2.3.4.5
+6.7.8.9.10'''
+    print (text)
+    a = '"---" \'---\''
+    b = "\"---\" '---'"
+    print (a)
+    print (b)
+
 
 if __name__ == '__main__':
     int_test()
@@ -96,3 +106,4 @@ if __name__ == '__main__':
     float_test()
     complex_test()
     decimal_test()
+    string_test()
