@@ -73,12 +73,26 @@ def float_test():
     print (math.modf(13.732))
 
 def complex_test():
+    import cmath
     z = 5-12j
     print(z.real, z.imag)
     print (z.conjugate())
+    
+def decimal_test():
+    import decimal
+    a = decimal.Decimal(9876)
+    b = decimal.Decimal("54321.012345678987654321")
+    print (a + b)
+    c = decimal.Decimal.from_float(1.234)
+    print (c)
+    
+    print (23/1.05)
+    print (decimal.Decimal(23)/decimal.Decimal('1.05'))
+
 
 if __name__ == '__main__':
     int_test()
     bool_test()
     float_test()
     complex_test()
+    decimal_test()
