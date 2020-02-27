@@ -115,6 +115,24 @@ def string_test():
     print (ord(euros[0]))
     print (hex(ord(euros[0])))
     
+    s = chr(8734), chr(0x23b7)
+    
+    print (s)
+    print (ascii(s))
+    
+def unicode_test():
+    import unicodedata
+    print (chr(0x00c5))
+#    unicodedata.normalize()
+#   unicode collation Algorithm
+
+def slice_test():
+    s = "ABCDEFGHIJ"
+    for i in range(-10, 10):
+        print (i, s[i])
+    
+    
+    
 if __name__ == '__main__':
     int_test()
     bool_test()
@@ -122,3 +140,5 @@ if __name__ == '__main__':
     complex_test()
     decimal_test()
     string_test()
+    unicode_test()
+    slice_test()
