@@ -98,8 +98,23 @@ def string_test():
     b = "\"---\" '---'"
     print (a)
     print (b)
+    s = r"\\\r\n"
+    print (s)
 
+    s = "1234" + \
+        "5678"
+    print (s)
+    
+    s = ("12345"
+         "67890")
+    print (s)
 
+    euros = "€ \N{euro sign} \u20AC \U000020AC"
+    print (euros)
+    
+    print (ord(euros[0]))
+    print (hex(ord(euros[0])))
+    
 if __name__ == '__main__':
     int_test()
     bool_test()
