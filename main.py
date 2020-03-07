@@ -131,6 +131,13 @@ def slice_test():
     for i in range(-10, 10):
         print (i, s[i])
     
+    print(s[:])
+    print(s[0:len(s)])
+    print(s[::])
+    print(s[0:len(s):1])
+    print(s[::-1])
+    print(s[-1:-len(s)-1:-1])
+    
     
     
 if __name__ == '__main__':
