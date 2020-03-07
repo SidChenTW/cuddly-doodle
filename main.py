@@ -138,7 +138,19 @@ def slice_test():
     print(s[::-1])
     print(s[-1:-len(s)-1:-1])
     
+    print (s[::-2])
+    print (s[-2::-2])
     
+    #
+    # str.join()
+    #
+    data = ['1', '2', '3', '4', '5']
+    print (' '.join(data))
+    print ('.'.join(data))
+    print (' --> '.join(data))    
+    
+    print (' '.join(reversed(data)))
+    print (' '.join(data[::-1]))
     
 if __name__ == '__main__':
     int_test()
