@@ -152,6 +152,16 @@ def slice_test():
     print (' '.join(reversed(data)))
     print (' '.join(data[::-1]))
     
+def string_method_test():
+    s = 'hello world'
+    print (s.capitalize())
+    print ('98765432109876543210')
+    print (s.center(20, ' '))
+    print (s.center(20, '-'))
+    print (s.count('l', 3, -1))
+    print (s.count('ll'))
+    
+    
 if __name__ == '__main__':
     int_test()
     bool_test()
@@ -161,3 +171,4 @@ if __name__ == '__main__':
     string_test()
     unicode_test()
     slice_test()
+    string_method_test()
