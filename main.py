@@ -161,6 +161,20 @@ def string_method_test():
     print (s.count('l', 3, -1))
     print (s.count('ll'))
     
+    text = '測試'
+    text1 = text.encode('big5')
+    text2 = text1.decode('big5')
+    print (text1)
+    print (text2)
+    
+    text1 = '123456789 '
+    print (text1.endswith('89'))
+    print (text1.endswith('78', 0, -1))
+    print (text1.startswith('123'))
+    print (text1.startswith('23', 1))
+    
+    text1 = '\t123\t456\t789'
+    print (text1.expandtabs())
     
 if __name__ == '__main__':
     int_test()
