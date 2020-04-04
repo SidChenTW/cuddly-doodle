@@ -210,6 +210,11 @@ def string_format_test():
     element = "Silver"
     number = 47
     print ("Elephant {number} is {element}.".format(**locals()))
+    
+    import decimal
+    print ("{0} {0!s} {0!r} {0!a}".format(decimal.Decimal("93.4")))
+    
+    print ("{0} {0!s} {0!r} {0!a}".format("翻訳する"))
 
     
 if __name__ == '__main__':
