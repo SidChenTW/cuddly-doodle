@@ -215,6 +215,31 @@ def string_format_test():
     print ("{0} {0!s} {0!r} {0!a}".format(decimal.Decimal("93.4")))
     
     print ("{0} {0!s} {0!r} {0!a}".format("翻訳する"))
+    
+    s = "The sword of truth."
+    print ("{0}".format(s))
+    print ("{0:25}".format(s))
+    print ("{0:>25}".format(s))
+    print ("{0:^25}".format(s))
+    print ("{0:-^25}".format(s))
+    print ("{0:.<25}".format(s))
+    print ("{0:.10}".format(s))
+    
+    maxwidth = 12
+    print ("{0}".format(s[:maxwidth]))
+    print ("{0:.{1}}".format(s, maxwidth))
+    
+    print ("{0:0=12}".format(8749203))
+    print ("{0:0=12}".format(-8749203))
+    
+    print ("{0:012}".format(8749203))
+    print ("{0:012}".format(-8749203))
+    
+    print ("{0:*<15}".format(8749203))
+    print ("{0:*>15}".format(8749203))
+    print ("{0:*^15}".format(8749203))
+    print ("{0:*^15}".format(-8749203))
+    
 
     
 if __name__ == '__main__':
