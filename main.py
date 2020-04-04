@@ -126,6 +126,13 @@ def unicode_test():
 #    unicodedata.normalize()
 #   unicode collation Algorithm
 
+    print (unicodedata.lookup('LEFT CURLY BRACKET'))
+    print (unicodedata.name('/'))
+    print (unicodedata.decimal('9'))
+    print (unicodedata.category('A'))
+    print (unicodedata.bidirectional('\u0660'))
+    
+
 def slice_test():
     s = "ABCDEFGHIJ"
     for i in range(-10, 10):
@@ -161,6 +168,49 @@ def string_method_test():
     print (s.count('l', 3, -1))
     print (s.count('ll'))
     
+    text = "hello world, python!!"
+    print (text.capitalize(), text.capitalize().istitle())
+    print (text.title(), text.title().istitle())
+    
+    print (text.center(40, '-'))
+    print (text.center(40))
+    print (text.ljust(100, '*'))
+    print (text.rjust(100, '*'))
+#    print (text.format())
+    print (s.count('l'))
+    print (s.count('ll'))
+    
+    a = 'aeiou'
+    b = '12345'
+    table = ''.maketrans(a, b)
+    print ('aueoi'.translate(table))
+    
+def string_format_test():
+    print ("The novel '{0}' was published in {1}".format("Hard Times", 1854))
+    
+    print ("The novel '{{{0}}}' was published in {1}".format("Hard Times", 1854))
+    
+    # {field_name}
+    # {field_name!conversion}
+    # {field_name:format_specification}
+    # {field_name!conversion:format_specification}
+    
+    print ("{who} turned {age} this year.".format(who='She', age=88))
+    print ("The {who} was {0} last week.".format(12, who="boy"))
+    
+    stock = ["paper", "envelopes", "notepads", "pens", "paper clips"]
+    print ("We have {0[1]} and {0[2]} in stock".format(stock))
+    
+    d = dict(animal='elephants', weight=12000)
+    print ("The {0[animal]} weight {0[weight]} kg.".format(d))
+    
+    import math, sys
+    print ("math.pi=={0.pi} sys.maxunicode=={1.maxunicode}.".format(math, sys))
+    
+    element = "Silver"
+    number = 47
+    print ("Elephant {number} is {element}.".format(**locals()))
+
     
 if __name__ == '__main__':
     int_test()
@@ -169,6 +219,7 @@ if __name__ == '__main__':
     complex_test()
     decimal_test()
     string_test()
-    unicode_test()
+    unicode_test() #??
     slice_test()
     string_method_test()
+    string_format_test()
