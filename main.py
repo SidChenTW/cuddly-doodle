@@ -239,9 +239,47 @@ def string_format_test():
     print ("{0:*>15}".format(8749203))
     print ("{0:*^15}".format(8749203))
     print ("{0:*^15}".format(-8749203))
-    
 
+    print ("[{0:}][{1:}]".format(539802, -539802))
+    print ("[{0: }][{1: }]".format(539802, -539802))
+    print ("[{0:+}][{1:+}]".format(539802, -539802))
+    print ("[{0:-}][{1:-}]".format(539802, -539802))
+
+    print ("{0:b} {0:o} {0:x} {0:X}".format(14613198))
+    print ("{0:#b} {0:#o} {0:#x} {0:#X}".format(14613198))
+
+    print ("{0:,} {0:*>13,}".format(int(2.39432185e6)))
+
+    import locale
+    locale.setlocale(locale.LC_ALL, "")
+    x, y = (1234567890, 1234.56)
+    locale.setlocale(locale.LC_ALL, "C")
+    c = "{0:n} {1:n}".format(x, y)
+    print (c)
+
+    locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
+    en = "{0:n} {1:n}".format(x, y)
+    print (en)
     
+    locale.setlocale(locale.LC_ALL, "de_DE.UTF-8")
+    de = "{0:n} {1:n}".format(x, y)
+    print (de)
+
+    amount = (10 ** 3) * math.pi
+    print ("[{0:12.2e}] [{0:12.2f}]".format(amount))
+    print ("[{0:*>12.2e}] [{0:*>12.2f}]".format(amount))
+    print ("[{0:*>+12.2e}] [{0:*>+12.2f}]".format(amount))
+    
+    print ("{:,.6f}".format(decimal.Decimal("1234567890.1234567890")))
+    print ("{:,.6}".format(decimal.Decimal("1234567890.1234567890")))
+
+    print ("{0.real:.3f}{0.imag:+.3f}j".format(4.75917+1.2042j))
+    print ("{0.real:.3f}{0.imag:+.3f}j".format(4.75917-1.2042j))
+
+    print ("{0:,.4f}".format(3.59284e6-8.984327843e6j))
+
+
+
 if __name__ == '__main__':
     int_test()
     bool_test()
